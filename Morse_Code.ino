@@ -78,8 +78,6 @@ void loop(){
     beepArray[subIndex] = 2;
     subIndex ++;
   }
-
-//  printArray(beepArray);
   
   startTime = millis();
   while (button == LOW){
@@ -103,6 +101,3 @@ void loop(){
     Serial.print(" ");
   }
 }
-
-
-
