@@ -1,6 +1,4 @@
 const byte inPin = 4;
-const byte recordPin = 3;
-const byte outPin = 2;
 
 //letters (0-25), digits (26-36)
 const byte MORSECODE [][5] = {{1,2,0,0,0}, {2,1,1,1,0}, {2,1,2,1,0}, {2,1,1,0,0}, {1,0,0,0,0}, {1,1,2,1,0}
@@ -13,7 +11,6 @@ const byte MORSECODE [][5] = {{1,2,0,0,0}, {2,1,1,1,0}, {2,1,2,1,0}, {2,1,1,0,0}
 
 const char LETTERS [] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','1','2','3','4','5','6','7','8','9','0'};					 
 byte button = 0;
-boolean record = LOW;
 unsigned long startTime = 0;
 unsigned long stopTime = 0;
 unsigned long time = 0;
@@ -28,8 +25,6 @@ void setup(){
   Serial.begin(9600);
   
   pinMode(inPin,INPUT);
-  pinMode(recordPin,INPUT);
-  pinMode(outPin,OUTPUT);
 }
 
 byte letterSearch (byte array []){
